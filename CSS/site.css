@@ -1,0 +1,123 @@
+#hero {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/homeBG2.jpg") top center;
+  background-size: cover;
+}
+
+#hero:before {
+  content: "";
+  background: rgba(5, 13, 24, 0.3);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+#hero .hero-container {
+  position: relative;
+  z-index: 2;
+  min-width: 300px;
+}
+
+#hero h1 {
+  margin: 0 0 10px 0;
+  font-size: 100px;
+  font-weight: 700;
+  font-family: fantasy;
+  line-height: 56px;
+  color: #fff;
+}
+
+#hero p {
+  color: #fff;
+  margin-bottom: 50px;
+  font-size: 26px;
+  font-family: "Poppins", sans-serif;
+}
+
+#hero p span {
+  color: #fff;
+  padding-bottom: 4px;
+  letter-spacing: 1px;
+  border-bottom: 3px solid #149ddd;
+}
+
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+
+.arrow {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+  
+  .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+
+
+  .button {
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    border-radius: 10rem;
+    color: #fff;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 0.15rem;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .button:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0cf;
+    border-radius: 10rem;
+    z-index: -2;
+  }
+  .button:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #008fb3;
+    transition: all 0.3s;
+    border-radius: 10rem;
+    z-index: -1;
+  }
+  .button:hover {
+    color: #fff;
+  }
+  .button:hover:before {
+    width: 100%;
+  }
+  
